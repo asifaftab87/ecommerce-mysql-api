@@ -1,5 +1,6 @@
 package org.la.ecom.mysql.api.client;
 
+import java.net.URI;
 import java.net.URISyntaxException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class MysqlClient {
 
-private String url;
+	private String url;
 	
 	@Autowired
 	RestTemplate restTemplate;
@@ -29,6 +30,14 @@ private String url;
 			throws RestClientException, URISyntaxException {
 
 		return restTemplate.postForObject(this.url+url, request, responseType);
+	}
+	
+	public void put(String url, Object request) throws RestClientException {
+		restTemplate.put(this.url+url, request);
+	}
+	
+	public <T> T patchForObject(String url, Object request, Class<T> responseType) throws RestClientException {
+		return restTemplate.patchForObject(this.url+url, request, responseType);
 	}
 	
 }
