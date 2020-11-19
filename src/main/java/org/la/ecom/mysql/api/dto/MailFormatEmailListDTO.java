@@ -7,15 +7,15 @@ public class MailFormatEmailListDTO implements Serializable{
 
 	private static final long serialVersionUID = -6810754688448438811L;
 	
-	private List<String> mailList;
+	private List<UserDTO> userList;
 	private MailFormatDTO mailFormatDTO;
 	
-	public List<String> getMailList() {
-		return mailList;
+	public List<UserDTO> getUserList() {
+		return userList;
 	}
 
-	public void setMailList(List<String> mailList) {
-		this.mailList = mailList;
+	public void setUserList(List<UserDTO> userList) {
+		this.userList = userList;
 	}
 
 	public MailFormatDTO getMailFormatDTO() {

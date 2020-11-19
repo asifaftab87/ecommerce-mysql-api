@@ -1,6 +1,5 @@
 package org.la.ecom.mysql.api.client;
 
-import java.net.URI;
 import java.net.URISyntaxException;
 
 import org.springframework.beans.factory.annotation.Autowired;
