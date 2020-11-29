@@ -22,6 +22,7 @@ public class UserDTO implements Serializable{
 	private String passwordUser;
 	private Set<RoleDTO> roles;
 	private String dobString;
+	private String roleName;
 	
 	public UserDTO() {}
 	
@@ -117,4 +118,13 @@ public class UserDTO implements Serializable{
 	public void setDobString(String dobString) {
 		this.dobString = dobString;
 	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+	
 }
